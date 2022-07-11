@@ -1,0 +1,23 @@
+{
+  "name": "libraverse-contracs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-LibraVerse/smart-contracts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-LibraVerse/smart-contracts/issues"
+  },
+  "homepage": "https://github.com/The-LibraVerse/smart-contracts#readme",
+  "devDependencies": {
+    "hardhat": "^2.10.0",
+    "mocha": "^10.0.0"
+  }
+}
