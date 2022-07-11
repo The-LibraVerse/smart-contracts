@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint tests -c ./.eslintrc.js && solhint 'contracts/**/*.sol'",
+    "compile": "npm run lint && npx hardhat compile",
+    "test": "npm run compile && mocha --recursive tests/"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,19 @@
   },
   "homepage": "https://github.com/The-LibraVerse/smart-contracts#readme",
   "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "chai": "^4.3.6",
     "hardhat": "^2.10.0",
     "mocha": "^10.0.0"
+  },
+  "nodemonConfig": {
+    "ext": "*.js, *.sol",
+    "ignore": [
+      "node_modules"
+    ]
+  },
+  "dependencies": {
+    "eslint": "^8.19.0"
   }
 }
